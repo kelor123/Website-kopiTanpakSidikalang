@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Automatic Plant Watering</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,300;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Nav Start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Kopi <span>Tanpak Sidikalang</span></a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#produk">Produk</a>
+        <a href="#belanja">Pemesanan</a>
+        <a href="#contact">Kontak Kami</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- Nav End -->
+
+    <!-- Section Start -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Kopi <span>Alami</span></h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor,
+          pariatur.
+        </p>
+        <a href="#" class="cta">Beli Sekarang</a>
+      </main>
+    </section>
+    <!-- Section End -->
+
+    <!-- About section start -->
+    <section id="about" class="about">
+      <h2><span>Tentang Kami</span></h2>
+
+      <div class="about-container">
+        <div class="about-item">
+          <div class="about-img">
+            <img
+              src="img/WhatsApp Image 2024-12-15 at 15.26.45_7f9b6dd5.jpg"
+              alt="Tentang Kami"
+            />
+          </div>
+        </div>
+
+        <div class="about-item">
+          <div class="about-img">
+            <img
+              src="img/WhatsApp Image 2024-12-15 at 15.25.24_28cefe56.jpg"
+              alt="Tentang Kami"
+            />
+          </div>
+        </div>
+
+        <div class="about-item">
+          <div class="about-img">
+            <img
+              src="img/WhatsApp Image 2024-12-15 at 15.26.22_9252ff42.jpg"
+              alt="Tentang Kami"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About section end -->
+
+    <!-- Produk Section start -->
+    <section id="produk" class="produk">
+      <h2>Produk</h2>
+
+      <div class="row">
+        <div class="produk-img"></div>
+        <div class="content-produk">
+          <h3>Kelebihan Kopi Tanpak Sidikalang</h3>
+          <p>
+            Kopi Tanpak Sindikalang adalah salah satu kopi khas dari daerah
+            Tapanuli Utara, Sumatera Utara, yang terkenal dengan kualitasnya.
+            Kopi ini memiliki cita rasa yang unik dengan karakteristik body yang
+            kuat, tingkat keasaman (acidity) yang seimbang, serta sentuhan rasa
+            cokelat dan rempah-rempah. Kopi ini ditanam di ketinggian sekitar
+            1.200-1.500 meter di atas permukaan laut, kondisi yang sangat ideal
+            untuk budidaya kopi Arabika. Ketinggian ini memberikan pengaruh
+            positif pada kualitas biji kopi, menghasilkan aroma yang lebih kaya
+            dan rasa yang lebih kompleks.
+          </p>
+          <p>
+            Kopi Tanpak Sindikalang ditanam di tanah vulkanis yang subur di
+            pegunungan Bukit Barisan, memberikan daya tahan alami terhadap
+            penyakit tanaman seperti leaf rust. Dengan kualitas ini, kopi
+            Sindikalang menjadi populer di pasar ekspor, terutama di
+            negara-negara yang menghargai kopi spesialti. Selain itu, produksi
+            kopi ini menjadi sumber penghidupan utama bagi masyarakat lokal,
+            sehingga membeli kopi Tanpak Sindikalang juga turut mendukung
+            ekonomi daerah. Sebagai salah satu kopi unggulan Sumatera, kopi ini
+            menjadi alternatif yang terjangkau dibandingkan kopi impor dengan
+            kualitas setara. Kombinasi dari kualitas biji, cita rasa khas, dan
+            daya dukung terhadap ekonomi lokal menjadikan kopi Tanpak
+            Sindikalang sebagai salah satu kebanggaan Indonesia di dunia kopi.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pemesanan section start -->
+
+    <section id="belanja" class="pemesanan">
+      <h2>Pemesanan</h2>
+      <form id="order-form">
+        <div class="form-group">
+          <label for="name">Nama:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Nomor Telepon:</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+        <div class="form-group">
+          <label for="quantity">Jumlah:</label>
+          <input type="number" id="quantity" name="quantity" required />
+        </div>
+        <button type="submit">Pesan Sekarang</button>
+      </form>
+    </section>
+
+    <!-- Pemesanan section end -->
+
+    <!-- Kontak kami section start -->
+
+    <section id="contact" class="contact">
+      <h2>Kontak Kami</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+        mollitia dolor, totam ab officia saepe?
+      </p>
+
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.9994422266655!2d115.09403070877028!3d-8.101537291893637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd190a853f0bddb%3A0x24df38efb2b82f4c!2sAspol%20Kampung%20Tinggi%20Singaraja!5e0!3m2!1sen!2sid!4v1719115274212!5m2!1sen!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+
+        <form action="">
+          <div class="input-group">
+            <i data-feather="user" class="icon"></i>
+            <input type="text" placeholder="Nama" />
+          </div>
+
+          <div class="input-group">
+            <i data-feather="mail" class="icon"></i>
+            <input type="text" placeholder="Email" />
+          </div>
+
+          <div class="input-group">
+            <i data-feather="phone" class="icon"></i>
+            <input type="text" placeholder="No.Hp" />
+          </div>
+
+          <button type="submit" class="btn">Kirim Pesan</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Kontak kami section end -->
+    <script>
+      feather.replace();
+    </script>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

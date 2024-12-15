@@ -1,0 +1,468 @@
+:root {
+  --primary: #223ba1;
+  --bg: #158420;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(255, 255, 255, 1);
+  color: #fff;
+  /* min-height: 2000px; */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background: linear-gradient(0deg, white, chocolate);
+  border-bottom: 1px solid #a1a9da;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: #806a60;
+}
+
+.navbar .navbar-nav a {
+  color: #000000;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--bg);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--bg);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #000000;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--bg);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/WhatsApp\ Image\ 2024-12-15\ at\ 15.26.22_e369907e.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0; /* Menambahkan posisi top */
+  left: 0; /* Menambahkan posisi left */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 3%,
+    rgba(255, 255, 255, 0) 25%
+  );
+  pointer-events: none; /* Opsional, memungkinkan klik melalui overlay */
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: #806a60;
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1.2;
+  font-weight: 30;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: chocolate;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px;
+}
+
+/* About section */
+.about-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+}
+
+.about-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 4rem;
+}
+
+.about {
+  padding: 8rem 7% 1.4rem;
+  text-align: center;
+  background: linear-gradient(
+    to top,
+    chocolate,
+    #ffffff
+  ); /* Gradasi hijau dari bawah ke atas */
+  color: white; /* Warna teks putih agar kontras dengan latar belakang */
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+}
+
+.about h2 span {
+  color: chocolate;
+}
+
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-item p {
+  margin-top: 10px;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Produk section */
+#produk {
+  background-color: #4caf50;
+  background-repeat: repeat;
+  background: linear-gradient(to top, #fff, chocolate);
+}
+
+.produk, .contact {
+  padding: 10rem 7% 1.4rem;
+  min-height: 100vh;
+}
+
+.produk h2, .contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: chocolate;
+}
+
+.produk .row {
+  display: flex;
+}
+
+.produk .row .produk-img {
+  flex: 1 1 45rem;
+}
+
+.produk .row .produk-img img {
+  width: 100%;
+}
+
+.produk .row .content-produk {
+  flex-direction: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.produk .row .content-produk h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.produk .row .content-produk p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #403530;
+}
+
+/* Pemesanan section */
+#belanja {
+    min-height: 100vh;
+    background-color: var(--bg);
+    background: linear-gradient(to top, chocolate, #fff);
+}
+
+.pemesanan h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: chocolate;
+}
+
+.pemesanan {
+  padding: 8rem 7% 1.4rem;
+  min-height: 90vh;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+#order-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #4f2306;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #80bdff;
+  outline: none;
+}
+
+button[type="submit"] {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #89590d;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Kontak kami section */
+#contact {
+  background: linear-gradient(to top, chocolate,
+    #ffffff );
+}
+
+.contact h2 {
+  color: chocolate;
+  margin-bottom: 1rem;
+}
+
+.contact p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #403530;
+}
+
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: chocolate;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover; 
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: #f8f9fa;
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: chocolate;
+}
+
+.input-group .icon {
+  color: chocolate;
+  margin-right: 10px;
+}
+
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: chocolate;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+
+
+/* Media queries */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  #hamburger-menu {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #000000;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: #ffffff;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover:after {
+    transform: scaleX(0.2);
+  }
+
+  .produk .row {
+    flex-wrap: wrap;
+  }
+
+  .produk .row .produk-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .produk .row .content-produk {
+    padding: 0;
+  }
+
+  .produk .row .content-produk h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .produk .row .content-produk p {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
